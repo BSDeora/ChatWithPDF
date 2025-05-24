@@ -51,7 +51,7 @@ def get_conversional_chain():
     Question : \n {question}?\n
     Answer :
     """
-    model = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+    model = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
     prompt_temp = PromptTemplate(template=prompt_template,input_variables=["context", "question"])
     chain = load_qa_chain(model,prompt = prompt_temp)
     return chain
